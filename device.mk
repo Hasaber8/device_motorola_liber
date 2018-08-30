@@ -50,8 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.chef.rc \
-    fstab.qcom
+    init.chef.rc
 
 # NFC
 PRODUCT_COPY_FILES += \
