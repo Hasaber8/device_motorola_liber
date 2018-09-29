@@ -15,7 +15,7 @@
 #
 
 # Vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/evert/evert-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/chef/chef-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.evert.rc \
+    init.chef.rc \
     fstab.qcom
 
 # NFC

@@ -1,5 +1,5 @@
 #
-# vendor props for evert
+# vendor props for chef
 #
 
 # Audio
@@ -14,7 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.sensors=evert \
+    ro.hardware.sensors=chef \
     ro.vendor.sensors.maghalcal=true \
     ro.vendor.sensors.amd=false \
     ro.vendor.sensors.pmd=false \

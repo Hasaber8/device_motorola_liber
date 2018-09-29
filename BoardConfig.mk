@@ -17,16 +17,16 @@
 # Inherit from motorola sdm660-common
 -include device/motorola/sdm660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/evert
+DEVICE_PATH := device/motorola/chef
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := evert,MotoG6Plus,motog6plus
+TARGET_OTA_ASSERT_DEVICE := chef
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_evert_defconfig
+TARGET_KERNEL_CONFIG := lineageos_chef_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/sdm660
 TARGET_KERNEL_CLANG_COMPILE := true
 
@@ -49,4 +49,4 @@ WIFI_DRIVER_STATE_OFF := 0
 WIFI_DRIVER_STATE_ON := 1
 
 # inherit from the proprietary version
--include vendor/motorola/evert/BoardConfigVendor.mk
+-include vendor/motorola/chef/BoardConfigVendor.mk

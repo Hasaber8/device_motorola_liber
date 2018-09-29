@@ -488,4 +488,4 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 
 # Thermal
-etc/thermal-engine-evert.conf:vendor/etc/thermal-engine.conf
+etc/thermal-engine-chef.conf:vendor/etc/thermal-engine.conf
