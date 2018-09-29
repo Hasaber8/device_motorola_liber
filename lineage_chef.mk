@@ -70,11 +70,11 @@ endif
 PRODUCT_DEVICE := chef
 PRODUCT_NAME := lineage_chef
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto G6 Plus
+PRODUCT_MODEL := Motorola One Power
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := chef
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=chef
 
-BUILD_FINGERPRINT := motorola/chef/chef:8.0.0/OPW27.113-45/53:user/release-keys
+BUILD_FINGERPRINT := motorola/chef/chef_sprout:8.1.0/OPT28.53/db60:user/release-keys
