@@ -1,20 +1,20 @@
 Copyright 2018 - The LineageOS Project
 
-Device configuration for Motorola G6 Plus (evert)
+Device configuration for Motorola One Power (chef)
 ==================================
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | Octa-core 2.2 GHz Cortex-A53
-CHIPSET | Qualcomm SDM630 Snapdragon 630
-GPU     | Adreno 508
+CPU     | Octa-core 1.8 GHz Kryo 260
+CHIPSET | Qualcomm SDM636 Snapdragon 636
+GPU     | Adreno 509
 Memory  | 4GB or 6GB
-Shipped Android Version | 8.0 (Oreo)
+Shipped Android Version | 8.1 (Oreo)
 Storage | 64GB or 128GB
-Battery | 3200 mAh
-Dimensions | 160 x 75.5 x 8 mm
-Display | 1080 x 2160 pixels, 5.9" IPS LCD
-Rear Camera  | 12 MP (f/1.7) + 5 MP (f/2.2), (PDAF, dual pixel)
-Front Camera | 8 MP (f/2.2)
+Battery | 5000 mAh
+Dimensions | 156 x 76 x 8.98 mm
+Display | 1080 x 2246 pixels, 6.2" IPS LCD
+Rear Camera  | 16 MP (f/1.8) + 5 MP (f/2.2), (PDAF, dual pixel)
+Front Camera | 12 MP (f/2.2)
 
-![Motorola G6 Plus](https://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g6-plus-2.jpg "Motorola G6 Plus")
+![Motorola Moto One Power](https://i-cdn.phonearena.com//images/phones/73027-xlarge/Motorola-One-Power-5.jpg "Motorola Moto One Power")
