@@ -32,3 +32,7 @@ export DEVICE_BRINGUP_YEAR=2018
 ./../../$VENDOR/$DEVICE_COMMON/extract-files.sh $@
 
 BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+# Using in vendor libgui cam blobs
+sed -i "s|libgui.so|libPui.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_ppeiscore.so
+sed -i "s|libgui.so|libPui.so|g" "$BLOB_ROOT"/vendor/lib/libmmcamera_bokeh.so
