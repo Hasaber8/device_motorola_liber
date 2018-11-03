@@ -467,6 +467,16 @@
         <path name="deep-buffer-playback bt-sco" />
     </path>
 
+    <path name="deep-buffer-playback speaker-and-bt-sco">
+        <path name="deep-buffer-playback speaker" />
+        <path name="deep-buffer-playback bt-sco" />
+    </path>
+
+    <path name="deep-buffer-playback speaker-and-bt-sco-wb">
+        <path name="deep-buffer-playback speaker" />
+        <path name="deep-buffer-playback bt-sco-wb" />
+    </path>
+
     <path name="deep-buffer-playback afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -520,6 +530,16 @@
     <path name="low-latency-playback bt-sco-wb">
         <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="low-latency-playback bt-sco" />
+    </path>
+
+    <path name="low-latency-playback speaker-and-bt-sco">
+        <path name="low-latency-playback speaker" />
+        <path name="low-latency-playback bt-sco" />
+    </path>
+
+    <path name="low-latency-playback speaker-and-bt-sco-wb">
+        <path name="low-latency-playback speaker" />
+        <path name="low-latency-playback bt-sco-wb" />
     </path>
 
     <path name="low-latency-playback speaker-and-hdmi">
@@ -596,6 +616,16 @@
         <path name="audio-ull-playback bt-sco" />
     </path>
 
+    <path name="audio-ull-playback speaker-and-bt-sco">
+        <path name="audio-ull-playback speaker" />
+        <path name="audio-ull-playback bt-sco" />
+    </path>
+
+    <path name="audio-ull-playback speaker-and-bt-sco-wb">
+        <path name="audio-ull-playback speaker" />
+        <path name="audio-ull-playback bt-sco-wb" />
+    </path>
+
     <path name="audio-ull-playback speaker-and-hdmi">
         <path name="audio-ull-playback hdmi" />
         <path name="audio-ull-playback" />
@@ -661,6 +691,16 @@
     <path name="compress-offload-playback bt-sco-wb">
         <ctl name="BT SampleRate" value="KHZ_16" />
         <path name="compress-offload-playback bt-sco" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco">
+        <path name="compress-offload-playback speaker" />
+        <path name="compress-offload-playback bt-sco" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco-wb">
+        <path name="compress-offload-playback speaker" />
+        <path name="compress-offload-playback bt-sco-wb" />
     </path>
 
     <path name="compress-offload-playback speaker-and-hdmi">
@@ -2110,6 +2150,14 @@
 
     <path name="voice-rec-dmic-ef-fluence">
         <path name="dmic-endfire" />
+    </path>
+
+    <path name="camcorder-mic-bf">
+        <ctl name="INT3_MI2S_TX Channels" value="Two" />
+        <ctl name="DEC1 MUX" value="ADC1" />
+        <ctl name="DEC2 MUX" value="ADC2" />
+        <ctl name="ADC2 MUX" value="INP3" />
+        <ctl name="ADC1_INP1 Switch" value="1" />
     </path>
 
     <path name="handset-stereo-dmic-ef-liquid">

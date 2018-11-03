@@ -9,9 +9,10 @@ vendor/etc/acdbdata/Speaker_cal.acdb
 
 # Display calib
 vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_nt_fhd_618.xml
+vendor/etc/qdcm_calib_data_mipi_mot_vid_csot_nt_fhd_618.xml
 
 # Camera
-lib/hw/libSonyDefocus.so:vendor/lib/hw/libSonyDefocus.so
+vendor/lib/hw/libSonyDefocus.so
 vendor/lib/hw/camera.sdm660.so
 vendor/lib/libhal_dbg.so
 vendor/lib/libactuator_dw9714.so
@@ -31,9 +32,7 @@ vendor/lib/libqomx_jpegenc_pipe.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libremosaic_daemon.so
 vendor/lib/libvideobokeh.so
-lib/libts_face_beautify_hal.so
 vendor/lib64/libvideobokeh.so
-lib64/libts_face_beautify_hal.so
 vendor/etc/camera/bokeh_preview.cfg
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/ov12a10_qtech_chromatix.xml
@@ -43,7 +42,7 @@ vendor/lib64/libcdsprpc.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libDepthBokehEffect.so
-vendor/lib/libPui.so|2289516454cceae50bb3963f9255bc113a24b508
+vendor/lib/libgui_vendor.so|2289516454cceae50bb3963f9255bc113a24b508
 
 # Camera - Chromatix
 vendor/lib/libchromatix_ov12a10_qtech_4k_preview_3a.so
@@ -220,7 +219,6 @@ vendor/lib/libmmcamera_pdaf.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_quadracfa.so
-vendor/lib/libmmcamera_sat_test_lib.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libmmcamera_thread_services.so
@@ -241,16 +239,8 @@ vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
 # Camera - Postprocessing
-vendor/lib/libchromaflash.so
 vendor/lib/libdualcameraddm.so
-vendor/lib/liboptizoom.so
-vendor/lib/libseemore.so
-vendor/lib/libubifocus.so
-vendor/lib64/libchromaflash.so
 vendor/lib64/libdualcameraddm.so
-vendor/lib64/liboptizoom.so
-vendor/lib64/libseemore.so
-vendor/lib64/libubifocus.so
 vendor/lib/libS5k2l7Pdaf.so
 vendor/lib/libS5k2l7PdafCamif.so
 vendor/lib/libmm-qcamera.so
