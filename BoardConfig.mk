@@ -31,8 +31,6 @@ BOARD_HAS_QCA_FM_SOC := "cherokee"
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_chef_defconfig
-TARGET_KERNEL_SOURCE := kernel/motorola/msm8998
-TARGET_KERNEL_CLANG_COMPILE := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
@@ -46,9 +44,6 @@ ENABLE_VENDOR_RIL_SERVICE := false
 
 # Treble
 PRODUCT_SHIPPING_API_LEVEL := 27
-
-# Wifi
-WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
 # inherit from the proprietary version
 -include vendor/motorola/chef/BoardConfigVendor.mk
