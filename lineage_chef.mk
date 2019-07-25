@@ -77,4 +77,4 @@ PRODUCT_RELEASE_NAME := chef
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=chef
 
-BUILD_FINGERPRINT := motorola/chef/chef_sprout:8.1.0/OPT28.53/db60:user/release-keys
+BUILD_FINGERPRINT := motorola/chef/chef_sprout:9/PPTS29.74-41-3/45809c:user/release-keys
