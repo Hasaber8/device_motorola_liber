@@ -7,10 +7,6 @@ vendor/etc/acdbdata/Hdmi_cal.acdb
 vendor/etc/acdbdata/Headset_cal.acdb
 vendor/etc/acdbdata/Speaker_cal.acdb
 
-# Display calib
-vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_nt_fhd_618.xml
-vendor/etc/qdcm_calib_data_mipi_mot_vid_csot_nt_fhd_618.xml
-
 # Camera
 vendor/lib/hw/libSonyDefocus.so
 vendor/lib/hw/camera.sdm660.so
@@ -257,6 +253,10 @@ vendor/firmware/cpp_firmware_v1_5_1.fw
 vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
+
+# Display calib
+vendor/etc/qdcm_calib_data_mipi_mot_vid_tianma_nt_fhd_618.xml
+vendor/etc/qdcm_calib_data_mipi_mot_vid_csot_nt_fhd_618.xml
 
 # DRM
 vendor/bin/qseecomd
