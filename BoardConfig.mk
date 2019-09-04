@@ -40,8 +40,5 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := false
 
-# Treble
-PRODUCT_SHIPPING_API_LEVEL := 27
-
 # inherit from the proprietary version
 -include vendor/motorola/chef/BoardConfigVendor.mk
