@@ -38,7 +38,6 @@ vendor/lib64/libcdsprpc.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libDepthBokehEffect.so
-vendor/lib/libgui_vendor.so|2289516454cceae50bb3963f9255bc113a24b508
 
 # Camera - Chromatix
 vendor/lib/libchromatix_ov12a10_qtech_4k_preview_3a.so
