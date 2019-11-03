@@ -1502,6 +1502,10 @@
     </path>
 
     <path name="compress-voip-call speaker">
+        <path name="compress-voip-call" />
+    </path>
+
+    <path name="compress-voip-call speaker">
         <ctl name="TERT_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer INT3_MI2S_TX_Voip" value="1" />
     </path>
