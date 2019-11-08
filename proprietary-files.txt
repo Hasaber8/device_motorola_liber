@@ -275,8 +275,8 @@ vendor/lib64/libssd.so
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-ets.rc
-vendor/lib64/vendor.egistec.hardware.fingerprint@2.0_vendor.so
-vendor/lib/vendor.egistec.hardware.fingerprint@2.0_vendor.so
+vendor/lib64/vendor.egistec.hardware.fingerprint@2.0.so
+vendor/lib/vendor.egistec.hardware.fingerprint@2.0.so
 vendor/lib64/libets_fp_et5.so
 vendor/lib64/libets_teeclient.so
 vendor/lib/libets_fp_et5.so
@@ -286,13 +286,8 @@ vendor/etc/init/init.ets.rc
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
-vendor/lib/hw/gatekeeper.sdm660.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
-vendor/lib64/hw/gatekeeper.sdm660.so
-
-# IMS
--priv-app/ims/ims.apk|b664bb413e88dbe88f49f400260f288306fc9e23
 
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
