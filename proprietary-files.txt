@@ -11,6 +11,8 @@ vendor/etc/acdbdata/Speaker_cal.acdb
 vendor/lib/hw/libSonyDefocus.so
 vendor/lib/hw/camera.sdm660.so
 vendor/lib/libhal_dbg.so
+vendor/lib/libseemore.so
+vendor/lib64/libseemore.so
 vendor/lib/libactuator_dw9714.so
 vendor/lib/libactuator_fp5510e2.so
 vendor/lib/libflash_pmic.so
