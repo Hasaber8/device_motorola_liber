@@ -142,15 +142,6 @@ ro.camera.cfa.packagelist=com.motorola.coresettingsext,com.motorola.camera2,com.
 # ADDITIONAL_BUILD_PROPERTIES
 #
 ril.subscription.types=RUIM
-vendor.mm.enable.qcom_parser=33559074
-persist.audio.qti.flac.decoder=true
-persist.audio.endcall.delay=250
-audio.deep_buffer.media=true
-audio.offload.disable=false
-audio.offload.video=false
-audio.offload.min.duration.secs=60
-audio.offload.gapless.enabled=false
-persist.sys.bootupvolume=5
 ro.mot.security.enable=true
 ro.boot.wificountrycode=00
 ro.mot.build.version.sdk_int=30
