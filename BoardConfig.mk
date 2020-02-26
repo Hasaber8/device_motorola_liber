@@ -41,7 +41,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0A0000000
 BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912
 
 # RIL
-ENABLE_VENDOR_RIL_SERVICE := false
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # inherit from the proprietary version
 -include vendor/motorola/chef/BoardConfigVendor.mk
