@@ -70,5 +70,7 @@ PRODUCT_RELEASE_NAME := chef
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=chef
 
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC=" 10 QPTS30.61-18-3 9514c release-keys"
+
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/chef_retail/chef_sprout:10/QPT30.52-2/28ac7:user/release-keys
+BUILD_FINGERPRINT := motorola/chef_retail/chef_sprout:10/QPTS30.61-18-3/9514c:user/release-keys
