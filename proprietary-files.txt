@@ -1,10 +1,10 @@
 # Audio ACDB
-vendor/etc/acdbdata/Bluetooth_cal.acdb
+vendor/etc/acdbdata/Bluetooth_cal.acdb|de32f236e41af911ffaa7a52018eb5e1556936c1
 vendor/etc/acdbdata/General_cal.acdb
 vendor/etc/acdbdata/Global_cal.acdb
-vendor/etc/acdbdata/Handset_cal.acdb
+vendor/etc/acdbdata/Handset_cal.acdb|87df3deddcf8a044b1dbc30544739a1ff1609cad
 vendor/etc/acdbdata/Hdmi_cal.acdb
-vendor/etc/acdbdata/Headset_cal.acdb
+vendor/etc/acdbdata/Headset_cal.acdb|e80ccc45897a0886ca25d3562c09efd052d44381
 vendor/etc/acdbdata/Speaker_cal.acdb
 
 # Camera
