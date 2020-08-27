@@ -24,8 +24,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-import com.moto.actions.actions.Constants;
-
 public class ScreenReceiver extends BroadcastReceiver {
     private final ScreenStateNotifier mNotifier;
 

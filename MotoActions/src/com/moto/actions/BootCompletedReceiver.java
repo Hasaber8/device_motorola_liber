@@ -28,7 +28,6 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.moto.actions.util.FileUtils;
-import com.moto.actions.actions.Constants;
 import com.moto.actions.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -40,11 +39,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         Log.i(TAG, "Booting");
-
-        // Restore nodes to saved preference values
-        for (String pref : Constants.sPrefKeys) {
-             Constants.writePreference(context, pref);
-        }
 
         context.startService(new Intent(context, ServiceWrapper.class));
     }
