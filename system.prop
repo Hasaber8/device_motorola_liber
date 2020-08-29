@@ -36,6 +36,7 @@ media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
+mm.enable.smoothstreaming=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 #13631487 is decimal sum of supported codecs in AAL
@@ -141,11 +142,20 @@ ro.camera.cfa.packagelist=com.motorola.coresettingsext,com.motorola.camera2,com.
 # ADDITIONAL_BUILD_PROPERTIES
 #
 ril.subscription.types=RUIM
+vendor.mm.enable.qcom_parser=33559074
+persist.audio.qti.flac.decoder=true
+persist.audio.endcall.delay=250
+audio.offload.disable=false
+audio.deep_buffer.media=true
+audio.offload.video=false
+audio.offload.min.duration.secs=60
+audio.offload.gapless.enabled=false
+persist.sys.bootupvolume=5
 ro.mot.security.enable=true
 ro.mot.build.customerid=retail
 ro.mot.build.version.sdk_int=30
-ro.mot.build.product.increment=1
-ro.mot.build.version.release=30.1
+ro.mot.build.product.increment=201
+ro.mot.build.version.release=30.201
 ro.treble.enabled=true
 net.bt.name=Android
 ro.vendor.qti.va_aosp.support=1
