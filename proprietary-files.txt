@@ -1,6 +1,19 @@
 lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
 
+lib/libfm-hci.so
+lib/libfmq.so
+lib/libvndfwk_detect_jni.qti.so
+lib64/libfm-hci.so
+lib64/libfmq.so
+lib64/libimgTuner_jni.so
+lib64/libjni_pacprocessor.so
+lib64/libvndfwk_detect_jni.qti.so
+
+etc/permissions/com.motorola.software.fmradioservice.xml
+lib/fm_helium.so
+lib64/fm_helium.so
+
 bin/qvrservice
 bin/wfdservice
 etc/init/wfdservice.rc

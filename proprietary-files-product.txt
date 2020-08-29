@@ -391,3 +391,18 @@ product/etc/permissions/privapp-permissions-com.motorola.vzw.pco.extensions.pcor
 
 -product/priv-app/daxService/daxService.apk
 
+product/lib/libqcomfm_jni_product.so
+product/lib64/libqcomfm_jni_product.so
+product/lib/libseccam.so
+product/lib64/libseccam.so
+product/lib64/libsecureui_svcsock_system.so
+product/lib64/libGPQTEEC_system.qti.so
+product/lib64/libGPTEE_system.qti.so
+product/lib64/libQTEEConnector_system.so
+product/lib64/libcryptfs_hw.so
+
+-product/app/FMRadioService/FMRadioService.apk
+-product/app/FMPlayer/FMPlayer.apk
+-product/framework/qcom.fmradio_product.jar
+product/lib64/vendor.qti.hardware.fm@1.0.so
+
