@@ -104,9 +104,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SnapdragonCamera2
 
-# ANT+
-#PRODUCT_PACKAGES += \
-#    AntHalService
+# FM
+PRODUCT_PACKAGES += \
+    libqcomfm_jni \
+    qcom.fmradio
+
+PRODUCT_BOOT_JARS += qcom.fmradio
 
 # QMI
 PRODUCT_PACKAGES += \

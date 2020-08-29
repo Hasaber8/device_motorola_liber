@@ -111,6 +111,10 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
+# FM
+BOARD_HAVE_QCOM_FM := true
+BOARD_HAS_QCA_FM_SOC := "cherokee"
+
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 include vendor/omni/sepolicy/sepolicy.mk
