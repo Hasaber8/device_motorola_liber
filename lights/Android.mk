@@ -1,3 +1,4 @@
+ifeq ($(TARGET_DEVICE),def)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -40,3 +41,4 @@ LOCAL_MODULE_STEM := android.hardware.light@2.0-service.rc
 LOCAL_SRC_FILES := android.hardware.light@2.0-service.def.rc
 
 include $(BUILD_PREBUILT)
+endif
