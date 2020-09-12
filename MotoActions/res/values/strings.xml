@@ -47,10 +47,6 @@
     <string name="fingerprint_gestures_screenoff_summary">Use fingerprint gestures when screen off.\n\nFingerprint unlocking must be disabled to use this feature.</string>
     <string name="fingerprint_actions_screenoff">Actions with screen off</string>
 
-   <!-- Power touch -->
-   <string name="power_touch_title">Power touch</string>
-   <string name="power_touch_summary">Double tap on the power key for quick shortcuts</string>
-
    <!-- Screen off gestures haptic feedback -->
    <string name="haptic_feedback">Haptic feedback</string>
    <string name="haptic_feedback_summary">Vibrate when a touchscreen gesture is detected</string>

@@ -165,10 +165,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 #PRODUCT_BOOT_JARS += \
 #    com.nxp.nfc \
 #    tcmiface \
