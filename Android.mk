@@ -10,13 +10,3 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /system/lib64/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
-
-NXP_LIB := libstnfc_nci_jni.so libnfc_st_dta_jni.so
-NXP_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT_APPS)/Nfc_st/lib/arm64/,$(notdir $(NXP_LIB)))
-$(NXP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "NXP lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system/product/lib64/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(NXP_SYMLINKS)
