@@ -41,7 +41,10 @@ int main() {
         return 1;
     }
 
+    LOG(ERROR) << "Light HAL service ready.";
+    LOG(VERBOSE) << "Light HAL service ready.";
     LOG(INFO) << "Light HAL service ready.";
+    LOG(WARNING) << "Light HAL service ready.";
 
     joinRpcThreadpool();
 

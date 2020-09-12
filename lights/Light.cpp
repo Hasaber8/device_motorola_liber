@@ -31,26 +31,25 @@ namespace light {
 namespace V2_0 {
 namespace implementation {
 
-#define LEDS            "/sys/class/leds/"
+#define LEDS            "/sys/class/leds/charging/"
 
 #define LCD_LED         "/sys/class/backlight/panel0-backlight/brightness"
-#define RED_LED         LEDS "red_moto/"
-#define GREEN_LED       LEDS "green_moto/"
-#define BLUE_LED        LEDS "blue_moto/"
 
-#define BREAH           "breath"
-#define BREAH_PATTERN   "breath_pattern"
+#define DELAY_ON        "delay_on"
+#define DELAY_OFF       "delay_off"
 #define BRIGHTNESS      "brightness"
 
 /*
  * Write value to path and close file.
  */
 static void set(std::string path, std::string value) {
+    ALOGE("set string");
     std::ofstream file(path);
     file << value;
 }
 
 static void set(std::string path, int value) {
+    ALOGE("set int");
     set(path, std::to_string(value));
 }
 
@@ -64,104 +63,39 @@ static T get(const std::string& path, const T& def) {
 }
 
 static void handleBacklight(const LightState& state) {
-    int brightness = Light::rgbToBrightness(state);
+    int maxBrightness = get("/sys/class/backlight/panel0-backlight/max_brightness", -1);
+    if (maxBrightness < 0) {
+        maxBrightness = 255;
+    }
+    int sentBrightness = Light::rgbToBrightness(state);
+    int brightness = sentBrightness * maxBrightness / 255;
     set(LCD_LED, brightness);
-}
-
-/*
- * Get breath value as color + pauseHi + pauseLo
- * rise_time hold_time fall_time off_time
- */
-static std::string getBreathPatternValue(uint32_t pauseHi,
-    uint32_t pauseLo) {
-
-    char buffer[40];
-    snprintf(buffer, sizeof(buffer), "%d %d %d %d\n",
-        pauseLo, pauseHi, pauseLo, pauseHi);
-    std::string ret = buffer;
-    return ret;
+    set(LCD_LED, brightness);
 }
 
 static void handleBattery(const LightState& state) {
     int brightness = Light::rgbToBrightness(state);
-
-    set(RED_LED BREAH, brightness == 0 ? 0 : 1);
-    set(RED_LED BRIGHTNESS, brightness);
-
-    set(GREEN_LED BREAH, brightness == 0 ? 0 : 1);
-    set(GREEN_LED BRIGHTNESS, brightness);
-
-    set(BLUE_LED BREAH, brightness == 0 ? 0 : 1);
-    set(BLUE_LED BRIGHTNESS, brightness);
+    set(LEDS BRIGHTNESS, brightness);
 }
 
 static void handleNotification(const LightState& state) {
-    uint32_t redBrightness, greenBrightness, blueBrightness, brightness;
-
     /*
      * Extract brightness from AARRGGBB.
      */
-    redBrightness = (state.color >> 16) & 0xFF;
-    greenBrightness = (state.color >> 8) & 0xFF;
-    blueBrightness = state.color & 0xFF;
+    int brightness = Light::rgbToBrightness(state);
 
-    brightness = (state.color >> 24) & 0xFF;
-
-    /*
-     * Scale RGB brightness if the Alpha brightness is not 0xFF.
-     */
-    if (brightness != 0xFF) {
-        redBrightness = (redBrightness * brightness) / 0xFF;
-        greenBrightness = (greenBrightness * brightness) / 0xFF;
-        blueBrightness = (blueBrightness * brightness) / 0xFF;
-    }
-
-
-    /* Disable breathing. */
-    set(RED_LED BREAH, 0);
-    set(RED_LED BRIGHTNESS, 0);
-    set(GREEN_LED BREAH, 0);
-    set(GREEN_LED BRIGHTNESS, 0);
-    set(BLUE_LED BREAH, 0);
-    set(BLUE_LED BRIGHTNESS, 0);
-
-    if (state.flashMode == Flash::TIMED) {
-        int32_t pauseHi = state.flashOnMs;
-        int32_t pauseLo = state.flashOffMs;
-        int32_t breath = 0;
-
-        if (pauseHi > 0 && pauseLo > 0) {
-            breath = 1;
-        }
-
-        /* Enable breathing if times are higher than 0. */
-        if (breath){
-            if (redBrightness > 0 || greenBrightness > 0 || blueBrightness > 0) {
-                set(RED_LED BREAH_PATTERN, getBreathPatternValue(pauseHi, pauseLo));
-                set(RED_LED BREAH, 1);
-                set(RED_LED BRIGHTNESS, 255);
-
-                set(GREEN_LED BREAH_PATTERN, getBreathPatternValue(pauseHi, pauseLo));
-                set(GREEN_LED BREAH, 1);
-                set(GREEN_LED BRIGHTNESS, 255);
-
-                set(BLUE_LED BREAH_PATTERN, getBreathPatternValue(pauseHi, pauseLo));
-                set(BLUE_LED BREAH, 1);
-                set(BLUE_LED BRIGHTNESS, 255);
-            }
-        }
-    } else {
-        if (redBrightness > 0 || greenBrightness > 0 || blueBrightness > 0) {
-                set(RED_LED BRIGHTNESS, 255);
-                set(GREEN_LED BRIGHTNESS, 255);
-                set(BLUE_LED BRIGHTNESS, 255);
+    if (brightness > 0 && state.flashMode == Flash::TIMED) {
+        if (state.flashOnMs > 0 && state.flashOffMs > 0) {
+            set(LEDS DELAY_ON, state.flashOnMs);
+            set(LEDS DELAY_OFF, state.flashOffMs);
         } else {
-                set(RED_LED BRIGHTNESS, 0);
-                set(GREEN_LED BRIGHTNESS, 0);
-                set(BLUE_LED BRIGHTNESS, 0);
+            set(LEDS BRIGHTNESS, brightness);
         }
+    } else if (brightness > 0) {
+        set(LEDS BRIGHTNESS, brightness);
+    } else {
+        set(LEDS BRIGHTNESS, 0);
     }
-
 }
 
 static std::map<Type, std::function<void(const LightState&)>> lights = {
