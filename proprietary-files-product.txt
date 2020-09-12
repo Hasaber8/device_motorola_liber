@@ -36,9 +36,10 @@ product/lib/libmotocare.so
 product/lib64/libmotocare.so
 product/lib64/libdmengine.so
 product/lib64/libdmjavaplugin.so
-product/framework/com.motorola.androidx.camera.extensions.jar
-product/priv-app/AttPhoneExt/AttPhoneExt.apk
-product/priv-app/DMService/DMService.apk
+product/framework/vendor.qti.hardware.bluetooth_dun-V1.0-java.jar
+-product/framework/com.motorola.androidx.camera.extensions.jar
+-product/priv-app/AttPhoneExt/AttPhoneExt.apk
+-product/priv-app/DMService/DMService.apk
 
 -product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
 -product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
@@ -365,9 +366,3 @@ product/lib64/libsecureui_svcsock_system.so
 product/lib64/libGPQTEEC_system.qti.so
 product/lib64/libGPTEE_system.qti.so
 product/lib64/libQTEEConnector_system.so
-
--product/app/FMRadioService/FMRadioService.apk
--product/app/FMPlayer/FMPlayer.apk
--product/framework/qcom.fmradio_product.jar
-product/lib64/vendor.qti.hardware.fm@1.0.so
-
