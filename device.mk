@@ -104,13 +104,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SnapdragonCamera2
 
-# FM
-PRODUCT_PACKAGES += \
-    libqcomfm_jni \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += qcom.fmradio
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
