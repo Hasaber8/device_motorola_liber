@@ -38,14 +38,4 @@
                 android:targetClass="com.moto.actions.DozeSettingsActivity" />
     </Preference>
 
-        <Preference
-            android:key="gesture_dtap_fps"
-            android:title="@string/power_touch_title"
-            android:summary="@string/power_touch_summary"
-            android:persistent="false" >
-            <intent
-                 android:targetPackage="com.motorola.motofpstouch"
-                 android:targetClass="com.motorola.motoedgeassistant.ui.SettingsActivity" />
-        </Preference>
-
 </PreferenceScreen>
