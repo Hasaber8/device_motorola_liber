@@ -1,4 +1,4 @@
-ifeq ($(TARGET_DEVICE),def)
+ifeq ($(TARGET_DEVICE),liber)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
