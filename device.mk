@@ -171,6 +171,10 @@ PRODUCT_PACKAGES += \
 #    WfdCommon \
 #    qcnvitems
 
+ROM_BUILDTYPE := GAPPS
+TARGET_INCLUDE_STOCK_ARCORE := true
+$(call inherit-product-if-exists, vendor/gapps/config.mk)
+
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
     device/motorola/liber/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
