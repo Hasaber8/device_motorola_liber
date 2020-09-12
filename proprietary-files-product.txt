@@ -11,19 +11,35 @@ product/lib64/vendor.qti.gnss@3.0.so
 product/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 product/lib/vendor.qti.imsrtpservice@2.1.so
-product/bin/dpmd
-product/etc/dpm/dpm.conf
-product/etc/init/dpmd.rc
-product/etc/permissions/com.qti.dpmframework.xml
 product/etc/permissions/embms-noship_product_privapp_permissions_qti.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
-product/etc/permissions/dpmapi.xml
 product/etc/permissions/embms.xml
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/UimService.xml
 product/etc/permissions/telephonyservice.xml
+product/etc/permissions/com.motorola.androidx.camera.extensions.xml
+product/etc/permissions/com.motorola.camera2.content.ai.xml
+product/etc/permissions/com.motorola.camera2.whitney.xml
+product/etc/permissions/com.motorola.omadm.service.xml
+product/etc/permissions/com.motorola.photoeditor.xml
+product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml
+product/etc/permissions/com.motorola.software.fmradioservice.xml
+product/etc/permissions/feature-com.uros.software.goodspeed.xml
+product/etc/permissions/privapp-permissions-com.motorola.att.phone.extensions.xml
+product/etc/permissions/privapp-permissions-com.motorola.attvowifi.xml
+product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
+product/etc/permissions/privapp-permissions-com.motorola.omadm.service.xml
+product/lib/libmcf_native_window_helper.motocamera.so
+product/lib/libmotocare.so
+product/lib64/libmotocare.so
+product/lib64/libdmengine.so
+product/lib64/libdmjavaplugin.so
+product/framework/com.motorola.androidx.camera.extensions.jar
+product/priv-app/AttPhoneExt/AttPhoneExt.apk
+product/priv-app/DMService/DMService.apk
+
 -product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
 -product/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
 -product/framework/com.qualcomm.qti.imscmservice-V2.2-java.jar
@@ -53,11 +69,9 @@ product/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
 -product/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
 -product/framework/vendor.qti.voiceprint-V1.0-java.jar
 product/lib64/com.qualcomm.qti.ant@1.0.so
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so
 -product/framework/vendor.qti.latency-V2.0-java.jar
 product/lib/com.qualcomm.qti.ant@1.0.so
 product/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
-product/lib/com.qualcomm.qti.dpm.api@1.0.so
 product/lib/com.qualcomm.qti.imscmservice@1.0.so
 product/lib/com.qualcomm.qti.imscmservice@2.0.so
 product/lib/com.qualcomm.qti.imscmservice@2.1.so
@@ -69,12 +83,6 @@ product/lib/com.quicinc.cne.api@1.1.so
 product/lib/com.quicinc.cne.constants@1.0.so
 product/lib/com.quicinc.cne.constants@2.0.so
 product/lib/com.quicinc.cne.constants@2.1.so
-product/lib64/libstfactory.so
-product/lib/libstfactory.so
-product/lib/libstnfc-nci.so
-product/lib64/libstnfc-nci.so
-product/lib64/libstnfc_nci_jni.so
-product/lib/libstnfc_nci_jni.so
 product/lib64/vendor.display.color@1.0.so
 product/lib64/vendor.display.color@1.1.so
 product/lib64/vendor.display.color@1.2.so
@@ -96,11 +104,8 @@ product/lib64/vendor.qti.gnss@2.1.so
 product/lib64/vendor.qti.gnss@3.0.so
 product/lib64/vendor.qti.hardware.alarm@1.0.so
 product/lib64/vendor.qti.hardware.bluetooth_audio@2.0.so
-product/lib64/vendor.qti.hardware.bluetooth_dun@1.0.so
-product/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 product/lib64/vendor.qti.hardware.btconfigstore@1.0.so
 product/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
-product/lib64/vendor.qti.hardware.cryptfshw@1.0.so
 product/lib64/vendor.qti.hardware.cvp@1.0-adapter-helper.so
 product/lib64/vendor.qti.hardware.cvp@1.0.so
 product/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -155,10 +160,6 @@ product/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 product/lib64/vendor.qti.latency@2.0.so
-product/lib64/libdpmctmgr.so
-product/lib64/libdpmfdmgr.so
-product/lib64/libdpmframework.so
-product/lib64/libdpmtcm.so
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so
@@ -191,11 +192,8 @@ product/lib/vendor.qti.gnss@2.1.so
 product/lib/vendor.qti.gnss@3.0.so
 product/lib/vendor.qti.hardware.alarm@1.0.so
 product/lib/vendor.qti.hardware.bluetooth_audio@2.0.so
-product/lib/vendor.qti.hardware.bluetooth_dun@1.0.so
-product/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 product/lib/vendor.qti.hardware.btconfigstore@1.0.so
 product/lib/vendor.qti.hardware.capabilityconfigstore@1.0.so
-product/lib/vendor.qti.hardware.cryptfshw@1.0.so
 product/lib/vendor.qti.hardware.cvp@1.0-adapter-helper.so
 product/lib/vendor.qti.hardware.cvp@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -252,7 +250,6 @@ product/lib/vendor.qti.imsrtpservice@2.1.so
 product/lib/vendor.qti.latency@2.0.so
 product/lib64/com.qualcomm.qti.ant@1.0.so
 product/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
-product/lib64/com.qualcomm.qti.dpm.api@1.0.so
 product/lib64/com.qualcomm.qti.imscmservice@1.0.so
 product/lib64/com.qualcomm.qti.imscmservice@2.0.so
 product/lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -264,10 +261,6 @@ product/lib64/com.quicinc.cne.api@1.1.so
 product/lib64/com.quicinc.cne.constants@1.0.so
 product/lib64/com.quicinc.cne.constants@2.0.so
 product/lib64/com.quicinc.cne.constants@2.1.so
-product/lib/libdpmctmgr.so
-product/lib/libdpmfdmgr.so
-product/lib/libdpmframework.so
-product/lib/libdpmtcm.so
 product/lib/libimscamera_jni.so
 product/lib/libimsmedia_jni.so
 product/lib/lib-imsvideocodec.so
@@ -306,8 +299,6 @@ product/lib/vendor.qti.hardware.vpp@1.1.so
 product/lib/vendor.qti.ims.callinfo@1.0.so
 product/lib/vendor.qti.ims.rcsconfig@1.0.so
 product/lib/vendor.qti.imsrtpservice@2.0.so
-product/etc/ixitdata.xml
-product/etc/nfcee_access.xml
 product/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 product/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 product/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
@@ -321,11 +312,6 @@ product/lib64/vendor.qti.hardware.data.connection@1.1.so
 -product/framework/vendor.qti.hardware.data.connection-V1.1-java.jar
 #product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 
-product/etc/permissions/android.hardware.nfc.hce.xml
-product/etc/permissions/android.hardware.nfc.hcef.xml
-product/etc/permissions/android.hardware.nfc.uicc.xml
-product/etc/permissions/android.hardware.nfc.xml
-product/etc/permissions/com.nxp.mifare.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 
 -product/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
@@ -348,33 +334,15 @@ product/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 product/lib64/vendor.qti.hardware.radio.uim@1.0.so
 product/lib64/vendor.qti.hardware.radio.uim@1.1.so
 product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
--product/app/uimlpaservice/uimlpaservice.apk
 product/framework/uimservicelibrary.jar
 -product/app/DynamicDDSService/DynamicDDSService.apk
 -product/app/uimgbaservice/uimgbaservice.apk
--product/app/colorservice/colorservice.apk
 
-product/etc/nfcee_access.xml
 product/lib/libdiag_system.so
 product/lib64/libdiag_system.so
 
--product/app/Nfc_st/Nfc_st.apk|2a2de6cca6a7c759632d6aee17eca8f23752f060
-product/lib64/libnfc_st_dta.so
-product/lib/libnfc_st_dta.so
-product/lib64/libnfc_st_dta_jni.so
-product/lib/libnfc_st_dta_jni.so
-
-product/lib/libdtaNfaProvider.so
-product/lib64/libdtaNfaProvider.so
-
--product/app/NfcSetup_st/NfcSetup_st.apk
--product/app/VirtualUiccPayment_st/VirtualUiccPayment_st.apk
-
-product/etc/permissions/com.dolby.daxservice.xml
--product/framework/com.st.android.nfc_extensions.jar
 product/etc/permissions/com.motorola.imager.access.xml
 product/etc/permissions/com.motorola.imager.foles.xml
-product/etc/permissions/com.st.android.nfc_extensions.xml
 product/etc/permissions/privapp-permissions-com.qualcomm.atfwd.xml
 product/etc/permissions/privapp-permissions-com.motorola.moto.xml
 product/etc/permissions/privapp-permissions-com.motorola.imagertuning_foles.xml
@@ -389,8 +357,6 @@ product/etc/permissions/privapp-permissions-com.motorola.vzw.pco.extensions.pcor
 
 -product/priv-app/atfwd/atfwd.apk
 
--product/priv-app/daxService/daxService.apk
-
 product/lib/libqcomfm_jni_product.so
 product/lib64/libqcomfm_jni_product.so
 product/lib/libseccam.so
@@ -399,7 +365,6 @@ product/lib64/libsecureui_svcsock_system.so
 product/lib64/libGPQTEEC_system.qti.so
 product/lib64/libGPTEE_system.qti.so
 product/lib64/libQTEEConnector_system.so
-product/lib64/libcryptfs_hw.so
 
 -product/app/FMRadioService/FMRadioService.apk
 -product/app/FMPlayer/FMPlayer.apk
