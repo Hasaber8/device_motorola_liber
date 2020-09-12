@@ -1,9 +1,9 @@
-ifeq ($(TARGET_DEVICE),def)
+ifeq ($(TARGET_DEVICE),liber)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := android.hardware.light@2.0-service.def
+LOCAL_MODULE := android.hardware.light@2.0-service.liber
 LOCAL_MODULE_TAGS  := optional
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/29/bin
@@ -15,7 +15,7 @@ LOCAL_SRC_FILES := \
     Light.cpp
 
 LOCAL_REQUIRED_MODULES := \
-    android.hardware.light@2.0-service.def.rc
+    android.hardware.light@2.0-service.liber.rc
 
 LOCAL_SHARED_LIBRARIES := \
     libbase \
@@ -31,14 +31,14 @@ include $(BUILD_EXECUTABLE)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := android.hardware.light@2.0-service.def.rc
+LOCAL_MODULE := android.hardware.light@2.0-service.liber.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/29/etc/init
 LOCAL_MODULE_STEM := android.hardware.light@2.0-service.rc
 
-LOCAL_SRC_FILES := android.hardware.light@2.0-service.def.rc
+LOCAL_SRC_FILES := android.hardware.light@2.0-service.liber.rc
 
 include $(BUILD_PREBUILT)
 endif
