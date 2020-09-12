@@ -137,6 +137,13 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libqdMetaData
 
+# FM
+PRODUCT_PACKAGES += \
+    libqcomfm_jni \
+    qcom.fmradio
+
+PRODUCT_BOOT_JARS += qcom.fmradio
+
 # Display
 PRODUCT_PACKAGES += \
     libion \
