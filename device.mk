@@ -25,11 +25,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/product,product) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/root,recovery/root) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,product/etc/permissions) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,system/etc/permissions)
+    $(call find-copy-subdir-files,*,device/motorola/liber/prebuilt/product,product) \
+    $(call find-copy-subdir-files,*,device/motorola/liber/prebuilt/root,recovery/root) \
+    $(call find-copy-subdir-files,*,device/motorola/liber/prebuilt/permissions,product/etc/permissions) \
+    $(call find-copy-subdir-files,*,device/motorola/liber/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/motorola/liber/prebuilt/permissions,system/etc/permissions)
 
 AB_OTA_PARTITIONS += \
     boot \
@@ -98,7 +98,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.def
+    android.hardware.light@2.0-service.liber
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -144,19 +144,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libqdMetaData
 
-#Nfc
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0 \
-    android.hardware.nfc@1.1 \
-    android.hardware.nfc@1.2 \
-    com.android.nfc_extras \
-    NfcNci \
-    Tag \
-    SecureElement
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
-
 # Display
 PRODUCT_PACKAGES += \
     libion \
@@ -173,6 +160,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 PRODUCT_BOOT_JARS += \
     android.hidl.manager-V1.0-java \
     QPerformance \
@@ -180,7 +171,7 @@ PRODUCT_BOOT_JARS += \
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
-    device/motorola/def/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
+    device/motorola/liber/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
 
 # Temporary handling
 #
@@ -188,8 +179,8 @@ PRODUCT_COPY_FILES += \
 # does not exist as they are mutually exclusive.  Once all target's android_filesystem_config.h
 # have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
 DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
-ifeq ($(wildcard device/motorola/def/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/motorola/def/config.fs
+ifeq ($(wildcard device/motorola/liber/android_filesystem_config.h),)
+  TARGET_FS_CONFIG_GEN := device/motorola/liber/config.fs
 else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)

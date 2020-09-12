@@ -57,33 +57,33 @@ BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/def/overlay/device
+DEVICE_PACKAGE_OVERLAYS += device/motorola/liber/overlay/device
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/motorola/def/device.mk)
+$(call inherit-product, device/motorola/liber/device.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_def
-PRODUCT_DEVICE := def
+PRODUCT_NAME := omni_liber
+PRODUCT_DEVICE := liber
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := motorola one hyper
+PRODUCT_MODEL := motorola one fusion +
 
-TARGET_DEVICE := MotoOneHyper
-PRODUCT_SYSTEM_NAME := MotoOneHyper
+TARGET_DEVICE := MotoOneFusion+
+PRODUCT_SYSTEM_NAME := MotoOneFusion+
 
-VENDOR_RELEASE := 10/QPF30.103-21-1/3932d:user/release-keys
-BUILD_FINGERPRINT := motorola/def_retail/def:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := motorola/def_retail/def:$(VENDOR_RELEASE)
-OMNI_PRIVATE_BUILD_DESC := "'def_retail-user 10 QPF30.103-21-1 3932d release-keys'"
+VENDOR_RELEASE := 10/QPI30.73-16-5-4/874f7:user/release-keys
+BUILD_FINGERPRINT := motorola/liber_retail/liber:$(VENDOR_RELEASE)
+OMNI_BUILD_FINGERPRINT := motorola/liber_retail/liber:$(VENDOR_RELEASE)
+OMNI_PRIVATE_BUILD_DESC := "'liber_retail-user 10 QPI30.73-16-5-4 874f7 release-keys'"
 
-PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-10-05
+PLATFORM_SECURITY_PATCH_OVERRIDE := 2020-07-01
 
 TARGET_VENDOR := motorola
 
@@ -92,5 +92,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.latch_unsignaled=1
 
-$(call inherit-product, vendor/motorola/def/def-vendor.mk)
-
+$(call inherit-product, vendor/motorola/liber/liber-vendor.mk)

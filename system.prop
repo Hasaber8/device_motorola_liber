@@ -44,6 +44,9 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 vendor.mm.enable.qcom_parser=63963135
 persist.mm.enable.prefetch=true
 
+#Netflix custom property
+ro.netflix.bsp_rev=Q6150-17263-1
+
 #
 # system props for the data modules
 #
@@ -102,9 +105,6 @@ persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 
-# system prop for NFC DT
-ro.nfc.port=I2C
-
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
 
@@ -145,14 +145,14 @@ ril.subscription.types=RUIM
 vendor.mm.enable.qcom_parser=33559074
 persist.audio.qti.flac.decoder=true
 persist.audio.endcall.delay=250
-audio.offload.disable=false
 audio.deep_buffer.media=true
+audio.offload.disable=false
 audio.offload.video=false
 audio.offload.min.duration.secs=60
 audio.offload.gapless.enabled=false
 persist.sys.bootupvolume=5
 ro.mot.security.enable=true
-ro.mot.build.customerid=retail
+ro.boot.wificountrycode=00
 ro.mot.build.version.sdk_int=30
 ro.mot.build.product.increment=201
 ro.mot.build.version.release=30.201
@@ -165,10 +165,10 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.radio.calls.on.ims=1
+
 persist.radio.pb.min.match=7
 persist.radio.suppress_ussd_rel=1
 ro.mot.popup_device=1
-ro.mot.product_wave=2019.4
 
 debug.sf.early_phase_offset_ns=1500000
 debug.sf.early_app_phase_offset_ns=1500000
