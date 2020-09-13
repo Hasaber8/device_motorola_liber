@@ -111,7 +111,7 @@
     <string name="config_mms_user_agent_profile_url">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
     <string name="config_wifi_tcp_buffers">524288,2097152,4194304,262144,524288,1048576</string>
     <string name="wifi_tether_configure_ssid_default">motorola one fusion+</string>
-    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingMaximum">256</integer>
     <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
    <array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
