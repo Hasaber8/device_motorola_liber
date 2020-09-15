@@ -19,20 +19,27 @@
 # product configuration (apps).
 #
 
-VENDOR_EXCEPTION_PATHS := omni \
+VENDOR_EXCEPTION_PATHS := aosp \
     motorola \
-    gapps \
-    microg
+    gapps
 
-# Sample: This is where we'd set a backup provider if we had one
-# $(call inherit-product, device/sample/products/backup_overlay.mk)
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
 
-# Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/motorola/liber/device.mk)
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+PRODUCT_SHIPPING_API_LEVEL := 29
+
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# PixelExperience Properties
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USES_AOSP_RECOVERY := true
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -50,27 +57,14 @@ TARGET_NO_RECOVERY := false
 #BOARD_INCLUDE_RECOVERY_DTBO = true
 BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE := false
 BOARD_USES_RECOVERY_AS_BOOT := false
-
-# must be before including omni part
-TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/liber/overlay/device
-DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
-
-# get the rest of aosp stuff after ours
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
-
-# Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/motorola/liber/device.mk)
-
-PRODUCT_SHIPPING_API_LEVEL := 29
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := omni_liber
+PRODUCT_NAME := aosp_liber
 PRODUCT_DEVICE := liber
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
@@ -79,10 +73,12 @@ PRODUCT_MODEL := motorola one fusion +
 TARGET_DEVICE := MotoOneFusion+
 PRODUCT_SYSTEM_NAME := MotoOneFusion+
 
-VENDOR_RELEASE := 10/QPI30.73-16-5-4/874f7:user/release-keys
-BUILD_FINGERPRINT := motorola/liber_retail/liber:$(VENDOR_RELEASE)
-OMNI_BUILD_FINGERPRINT := motorola/liber_retail/liber:$(VENDOR_RELEASE)
-OMNI_PRIVATE_BUILD_DESC := "'liber_retail-user 10 QPI30.73-16-5-4 874f7 release-keys'"
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DISC="liber_retail-user 10 QPI30.73-16-5-4 874f7 release-keys"
+
+BUILD_FINGERPRINT := "google/coral/coral:11/RP1A.200720.009/6720564:user/release-keys"
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2020-07-01
 
