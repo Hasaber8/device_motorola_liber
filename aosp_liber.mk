@@ -21,12 +21,13 @@
 
 VENDOR_EXCEPTION_PATHS := aosp \
     motorola \
-    gapps
+    gapps \
+    google-customization \
+    pixelstyle
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/mainline_system_arm64.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/motorola/liber/device.mk)
@@ -61,7 +62,7 @@ AB_OTA_UPDATER := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay/device \
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := aosp_liber
