@@ -81,19 +81,12 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 PRODUCT_PACKAGES += \
-    omni_charger_res_images \
+    charger_res_images \
     animation.txt \
     font_charger.png
 
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -130,9 +123,6 @@ PRODUCT_PACKAGES += \
     libandroid_net
 
 PRODUCT_PACKAGES += \
-    MotoActions
-
-PRODUCT_PACKAGES += \
     vndk_package
 
 PRODUCT_PACKAGES += \
@@ -159,6 +149,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyalsa
 
+#Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
 # TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
 PRODUCT_PACKAGES += \
