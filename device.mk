@@ -134,6 +134,10 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libqdMetaData
 
+# LineageActions
+PRODUCT_PACKAGES += \
+    LineageActions
+
 # FM
 PRODUCT_PACKAGES += \
     libqcomfm_jni \
