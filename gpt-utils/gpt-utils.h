@@ -80,10 +80,10 @@ extern "C" {
 #define AB_SLOT_B_SUFFIX                "_b"
 #define PTN_XBL                         "xbl"
 #define PTN_SWAP_LIST                   PTN_XBL, \
-            "abl", "bluetooth", "cmnlib64", "cmnlib", \
+            "abl", "aop", "bluetooth", "cmnlib64", "cmnlib", \
             "devcfg", "dsp", "dtbo", "fsg", "hyp", "keymaster", \
             "logo", "multiimgoem", "multiimgqti", "prov", \
-            "qupfw", "rpm", "storsec", "tz", "uefisecapp", \
+            "qupfw", "storsec", "tz", "uefisecapp", \
             "xbl_config"
 
 #define AB_PTN_LIST PTN_SWAP_LIST, "boot", "modem", "recovery", "vbmeta"

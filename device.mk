@@ -74,8 +74,14 @@ PRODUCT_PACKAGES_DEBUG += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.sm6150.recovery \
+    bootctrl.qcom \
     fastbootd
+
+PRODUCT_STATIC_BOOT_CONTROL_HAL := \
+    bootctrl.qcom \
+    libcutils \
+    libgptutils \
+    libz
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
@@ -196,6 +202,14 @@ else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)
   $(warning **********)
+endif
+
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# /vendor/default.prop is force-setting ro.adb.secure=1
+# Get rid of that by overriding it in /product on eng builds
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0
 endif
 
 $(call inherit-product, build/make/target/product/gsi_keys.mk)
