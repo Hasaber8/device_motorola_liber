@@ -147,6 +147,12 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery_dynamic_partition.fstab
 # Split selinux policy
 PRODUCT_SEPOLICY_SPLIT := true
 
+# Recovery
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+
 # Android generic system image always create metadata partition
 BOARD_USES_METADATA_PARTITION := true
 
