@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera2
+    Snap
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -138,13 +138,6 @@ PRODUCT_PACKAGES += \
 # LineageActions
 PRODUCT_PACKAGES += \
     LineageActions
-
-# FM
-PRODUCT_PACKAGES += \
-    libqcomfm_jni \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Display
 PRODUCT_PACKAGES += \
