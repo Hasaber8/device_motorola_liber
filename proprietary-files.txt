@@ -2,6 +2,7 @@ lib64/libaptX_encoder.so
 lib64/libaptXHD_encoder.so
 
 lib/libvndfwk_detect_jni.qti.so
+lib64/libcameraservice.so
 lib64/libimgTuner_jni.so
 lib64/libjni_pacprocessor.so
 lib64/libvndfwk_detect_jni.qti.so
