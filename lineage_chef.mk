@@ -20,10 +20,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Device
-$(call inherit-product, device/motorola/chef/device.mk)
+$(call inherit-product, device/motorola/liber/device.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -53,24 +52,21 @@ PRODUCT_PACKAGES_DEBUG += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.sdm660 \
-    bootctrl.sdm660.recovery
-
-# Recovery
-TARGET_RECOVERY_FSTAB := device/motorola/sdm660-common/rootdir/etc/fstab.qcom
+    bootctrl.sm6150 \
+    bootctrl.sm6150.recovery
 
 # Device identifiers
-PRODUCT_DEVICE := chef
-PRODUCT_NAME := lineage_chef
+PRODUCT_DEVICE := liber
+PRODUCT_NAME := lineage_liber
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Motorola One Power
+PRODUCT_MODEL := Motorola One Fusion +
 PRODUCT_MANUFACTURER := Motorola
-PRODUCT_RELEASE_NAME := chef
+PRODUCT_RELEASE_NAME := liber
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=chef
+    PRODUCT_NAME=liber
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="chef_sprout-user 10 QPTS30.61-18-12 65302 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DISC="liber_retail-user 10 QPI30.73-16-5-4 874f7 release-keys"
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/chef_retail/chef_sprout:10/QPTS30.61-18-12/65302:user/release-keys
+BUILD_FINGERPRINT := "motorola/liber_retail/liber:10/QPI30.73-28/7b8e5:user/release-keys"

@@ -25,11 +25,11 @@ set -e
 LINEAGE_ROOT="$MY_DIR"/../../..
 
 # Required!
-export DEVICE=chef
-export DEVICE_COMMON=sdm660-common
+export DEVICE=liber
+export DEVICE_COMMON=sm6150-common
 export VENDOR=motorola
 
-export DEVICE_BRINGUP_YEAR=2018
+export DEVICE_BRINGUP_YEAR=2020
 
 "./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
 

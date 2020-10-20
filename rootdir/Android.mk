@@ -4,10 +4,10 @@ include $(CLEAR_VARS)
 # Device init scripts
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.chef.rc
+LOCAL_MODULE       := init.liber.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init.chef.rc
+LOCAL_SRC_FILES    := etc/init.liber.rc
 LOCAL_VENDOR_MODULE    := true
 LOCAL_MODULE_RELATIVE_PATH := init/hw
 include $(BUILD_PREBUILT)

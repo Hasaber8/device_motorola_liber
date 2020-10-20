@@ -1,5 +1,5 @@
 #
-# vendor props for chef
+# vendor props for liber
 #
 
 # Audio
@@ -10,26 +10,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb \
     persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb \
     persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb \
-    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
-
-# Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=480
-
-# FM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.fm.use_audio_session=true
+    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb \
+    persist.vendor.audio.calfile7=/vendor/etc/acdbdata/Codec_cal.acdb
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.sensors=chef_sprout \
-    ro.vendor.sensors.maghalcal=true \
+    ro.hardware.sensors=liber \
     ro.mot.sensors.glance_approach=false \
-    ro.vendor.sensors.pmd=false \
-    ro.vendor.sensors.amd=false \
-    ro.vendor.sensors.rmd=false \
-    ro.vendor.sensors.scrn_ortn=false \
-    ro.vendor.sensors.pedometer=false \
-    ro.vendor.sensors.facing=false \
-    ro.vendor.sensors.cmc=false \
+    ro.vendor.sensors.mot_ltv=true \
+    ro.vendor.sensors.glance_approach=false \
+    ro.vendor.sensors.drop=true \
     ro.vendor.sdk.sensors.gestures=false
