@@ -24,12 +24,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Device
 $(call inherit-product, device/motorola/liber/device.mk)
 
-# A/B updater
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     system \
+    vbmeta \
+    product \
     vendor
 
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -44,16 +46,18 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
-# The following modules are included in debuggable builds only.
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl \
-    update_engine_client
+PRODUCT_HOST_PACKAGES += \
+    brillo_update_payload
 
-# Boot control HAL
+# Boot control
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+# Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.sm6150 \
-    bootctrl.sm6150.recovery
+    bootctrl.sm6150.recovery \
+    fastbootd
 
 # Device identifiers
 PRODUCT_DEVICE := liber

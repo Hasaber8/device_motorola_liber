@@ -23,6 +23,7 @@ $(call inherit-product-if-exists, vendor/motorola/liber/liber-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
@@ -61,10 +62,5 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
-# Verity
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/c0c4000.sdhci/by-name/system
-PRODUCT_VENDOR_VERITY_PARTITION := /dev/block/platform/soc/c0c4000.sdhci/by-name/vendor
-$(call inherit-product, build/target/product/verity.mk)
-
-# Inherit from motorola sdm660-common
-$(call inherit-product, device/motorola/sdm660-common/common.mk)
+# Inherit from motorola sm6150-common
+$(call inherit-product, device/motorola/sm6150-common/sm6150.mk)

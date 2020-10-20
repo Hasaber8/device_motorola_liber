@@ -15,12 +15,13 @@
 #
 
 # Inherit from motorola sdm660-common
--include device/motorola/sdm660-common/BoardConfigCommon.mk
+-include device/motorola/sm6150-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/motorola/liber
 
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := liber
+TARGET_RECOVERY_FSTAB := device/motorola/sm6150-common/rootdir/etc/fstab_dynamic.qcom
 
 # Display
 TARGET_SCREEN_DENSITY := 420
@@ -34,7 +35,6 @@ BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt/image:/firmware/image
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt/verinfo:/firmware/verinfo
 
 # Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 116995371008
 BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 536870912
 BOARD_VENDORIMAGE_PARTITION_SIZE := 649797632
