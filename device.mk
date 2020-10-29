@@ -19,8 +19,9 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-PRODUCT_PACKAGES += com.android.apex.cts.shim.v1_prebuilt
-TARGET_FLATTEN_APEX := false
+
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
@@ -29,14 +30,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,product/etc/permissions) \
     $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/system,system) \
     $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,system/etc/permissions)
-
-PRODUCT_PACKAGES += fstab.qcom
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.version.all_codenames=$(PLATFORM_VERSION_ALL_CODENAMES) \
-    ro.build.version.codename=$(PLATFORM_VERSION_CODENAME) \
-    ro.build.version.release=$(PLATFORM_VERSION) \
-    ro.build.version.sdk=$(PLATFORM_SDK_VERSION)
 
 AB_OTA_PARTITIONS += \
     boot \
@@ -87,10 +80,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     VisualizationWallpapers \
     librs_jni
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.verified_boot.xml
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
@@ -158,11 +147,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinyalsa
 
-
-# TODO(b/78308559): includes vr_hwc into GSI before vr_hwc move to vendor
-PRODUCT_PACKAGES += \
-    vr_hwc
-
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_telephony.xml \
@@ -170,17 +154,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
-#    android.hardware.vibrator@1.2-service.oneplus7pro
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
-
-#PRODUCT_BOOT_JARS += \
-#    com.nxp.nfc \
-#    tcmiface \
-#    WfdCommon \
-#    qcnvitems
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
