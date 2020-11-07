@@ -200,4 +200,5 @@ vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 
+sys.vendor.qti.servicetracker.disable=true
 ro.surface_flinger.supports_background_blur=1
