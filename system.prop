@@ -165,7 +165,6 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.radio.calls.on.ims=1
-
 persist.radio.pb.min.match=7
 persist.radio.suppress_ussd_rel=1
 ro.mot.popup_device=1
@@ -200,3 +199,5 @@ vendor.display.disable_scaler=0
 vendor.display.disable_ui_3d_tonemap=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
+
+ro.surface_flinger.supports_background_blur=1
