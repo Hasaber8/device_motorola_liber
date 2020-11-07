@@ -162,6 +162,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
 
+PRODUCT_BOOT_JARS += android.hidl.manager-V1.0-java
+
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
     device/motorola/def/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
