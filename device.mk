@@ -162,7 +162,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
 
-PRODUCT_BOOT_JARS += android.hidl.manager-V1.0-java
+PRODUCT_BOOT_JARS += \
+    android.hidl.manager-V1.0-java \
+    QPerformance \
+    UxPerformance
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
