@@ -137,7 +137,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0 \
     android.hardware.nfc@1.1 \
-    android.hardware.nfc@1.2
+    android.hardware.nfc@1.2 \
+    com.android.nfc_extras \
+    NfcNci \
+    Tag \
+    SecureElement
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 # Display
 PRODUCT_PACKAGES += \
@@ -154,10 +161,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
