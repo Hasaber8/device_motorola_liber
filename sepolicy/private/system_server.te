@@ -1,4 +1,3 @@
-#allow system_server init:binder call;
-#binder_call(system_server, init);
+allow system_server vendor_default_prop:file { open read };
 allow system_app sysfs_homebutton:file rw_file_perms;
 allow system_app sysfs_homebutton:dir search;
