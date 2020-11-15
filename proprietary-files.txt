@@ -337,3 +337,7 @@ etc/permissions/com.qti.snapdragon.sdk.display.xml
 lib/vendor.goodix.hardware.biometrics.fingerprint@3.0.so
 lib64/vendor.goodix.hardware.biometrics.fingerprint@3.0.so
 -framework/vendor.goodix.hardware.biometrics.fingerprint-V3.0-java.jar
+
+# New
+-framework/QPerformance.jar
+-framework/UxPerformance.jar

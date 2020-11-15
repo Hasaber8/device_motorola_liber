@@ -107,10 +107,6 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.liber
 
-# Camera
-PRODUCT_PACKAGES += \
-    SnapdragonCamera2
-
 # FM
 PRODUCT_PACKAGES += \
     libqcomfm_jni \
