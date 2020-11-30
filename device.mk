@@ -74,7 +74,7 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 PRODUCT_PACKAGES += \
-    omni_charger_res_images \
+     charger_res_images \
     animation.txt \
     font_charger.png
 
@@ -91,14 +91,6 @@ PRODUCT_PACKAGES += BluetoothExt
 PRODUCT_PACKAGES += vendor.qti.hardware.btconfigstore@2.0
 PRODUCT_PACKAGES += android.hardware.bluetooth@1.0
 PRODUCT_PACKAGES += vendor.qti.hardware.bluetooth_dun-V1.0-java
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
-
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -126,6 +118,10 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml \
     tcmiface
+
+#Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
 
 # Netutils
 PRODUCT_PACKAGES += \
