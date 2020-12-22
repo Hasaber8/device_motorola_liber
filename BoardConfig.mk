@@ -14,22 +14,12 @@
 # limitations under the License.
 #
 
--include device/motorola/sm7250-common/BoardConfigCommon.mk
+-include device/motorola/sm6150-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/racer
+DEVICE_PATH := device/motorola/liber
 
 # Display
 TARGET_SCREEN_DENSITY := 420
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/racer_defconfig
-
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
-    snd-soc-aov-trigger.ko:aov_trigger.ko \
-    snd-soc-cs35l41-spi.ko:cirrus_cs35l41-spi.ko \
-    snd-soc-cs35l41.ko:cirrus_cs35l41.ko \
-    snd-soc-cs47l35.ko:cirrus_cs47l35.ko \
-    snd-soc-madera.ko:cirrus_madera.ko \
-    snd-soc-wm-adsp.ko:cirrus_wm_adsp.ko \
-    irq-madera.ko:cirrus_irq-madera.ko
+TARGET_KERNEL_CONFIG := vendor/liber_defconfig

@@ -1,6 +1,18 @@
 #
-# Properties for racer
+# Properties for liber
 #
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb \
+    persist.vendor.audio.calfile1=/vendor/etc/acdbdata/Codec_cal.acdb \
+    persist.vendor.audio.calfile2=/vendor/etc/acdbdata/General_cal.acdb \
+    persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Global_cal.acdb \
+    persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Handset_cal.acdb \
+    persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Hdmi_cal.acdb \
+    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Headset_cal.acdb \
+    persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Speaker_cal.acdb \
+    persist.vendor.audio.calfile6=/vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -9,25 +21,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.fingerprint=goodix
-
-# Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.sf.color_mode=0 \
-    persist.sys.sf.enable_refresh_rate_rectification=0 \
-    persist.sys.sf.set_rectify_timer_ms=1000 \
-    persist.sys.sf.fps_threshold_duration_ms=290 \
-    persist.sys.sf.fps_threshold_count=29 \
-    persist.sys.sf.brightness_threshold_refresh_rate=6 \
-    persist.sys.sf.forbidden_RRR_under_lowbrightness=1
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.set_idle_timer_ms=4000 \
-    ro.surface_flinger.set_touch_timer_ms=4000 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.use_smart_90_for_video=true \
-    ro.surface_flinger.refresh_rate_switching=true \
-    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=1000000
 
 # HDR
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/motorola/sm7250-common/common.mk)
+$(call inherit-product, device/motorola/sm6150-common/common.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/racer/racer-vendor.mk)
+$(call inherit-product, vendor/motorola/liber/liber-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -32,7 +32,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/mixer_paths_madera_evt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_madera_evt.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_awinic_snd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_awinic_snd.xml \
     $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 
 # Init
