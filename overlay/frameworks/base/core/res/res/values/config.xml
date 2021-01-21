@@ -112,6 +112,7 @@
         <item>315</item>
         <item>420</item>
         <item>450</item>
+    </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
@@ -134,6 +135,7 @@
         <item>315</item>
         <item>420</item>
         <item>450</item>
+    </integer-array>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
@@ -142,7 +144,7 @@
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">1</integer>
-    <integer name="config_screenBrightnessSettingMaximum">256</integer>s
+    <integer name="config_screenBrightnessSettingMaximum">256</integer>
 
     <!-- Radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">48px</dimen>
