@@ -275,8 +275,16 @@ vendor/lib64/libmot_lux_standardization.so
 vendor/lib64/libmulticam_optical_zoom_control.so
 vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/libarcsoft_zoomtranslator_imp.so
-vendor/lib64/motorola.hardware.popup@1.0.so
 vendor/lib64/libfcell.so
+
+# POPUP
+vendor/bin/hw/motorola.hardware.popup.akm@1.0-service
+vendor/lib64/motorola.hardware.popup@1.0.so
+vendor/etc/init/motorola.hardware.popup.akm@1.0-service.rc
+vendor/lib/motorola.hardware.popup@1.0.so
+vendor/lib64/libpopup.so
+lib/motorola.hardware.popup@1.0.so
+lib64/motorola.hardware.popup@1.0.so
 
 # Sensors
 vendor/etc/sensors/config/default_sensors.json
